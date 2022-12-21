@@ -51,13 +51,10 @@ def decode(cipher_text)
 
   for word in cipher_word_array
     text += decode_word(word)
-    #text += ' '
   end
 
   return text
 end
-
-
 
 x = decode_char("-")
 puts("x first ===#{x}")
