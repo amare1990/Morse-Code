@@ -27,16 +27,41 @@ MORSE_CODE_DICT = {
   '--..' => 'Z'
 }
 
-def decode_char(code)
-  for letter in MORSE_CODE_DICT do
-    if code === MORSE_CODE_DICT[letter]
-      break
-    end
-  end
+def decode_char(cipher_char)
+  letter = MORSE_CODE_DICT[cipher_char]
   return letter
 end
 
+def decode_word(cipher_word)
+  cipher_array = cipher_word.split( )
+  word = ''
+  for x in cipher_array
+    word += MORSE_CODE_DICT[x]
+  end
 
-x = decode_char(".-")
+  return word
+end
+
+def decode(cipher_text)
+  cipher_word_array = cipher_text.split(   )
+  text = ''
+
+  for word in cipher_word_array
+    text += decode_word(word)
+    #text += ' '
+  end
+
+  return text
+end
+
+
+
+x = decode_char("-")
 puts(x)
 
+w = decode_word("-- -.--")
+puts w
+
+t = decode("-- -.--   -. .- -- .")
+
+puts "decode text = #{t}"
