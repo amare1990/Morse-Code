@@ -96,7 +96,7 @@ Inside the root directory of the project, run `ruby decoder.rb` command. `decode
 
 - GitHub: [@githubhandle](https://github.com/luccamicale)
 - Twitter: [@twitterhandle](@luccamicale_)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/luccamicale/)
 
 👤 **Amare Kassa**
 
