@@ -35,11 +35,7 @@ end
 def decode_word(cipher_word)
   cipher_array = cipher_word.split(' ')
   word = ''
-  for x in cipher_array
-    word += MORSE_CODE_DICT[x]
-  end
-
-  puts("word= #{word}")
+  cipher_array.each{|x| word += MORSE_CODE_DICT[x]}
 
   return "#{word} "
 end
@@ -49,9 +45,7 @@ def decode(cipher_text)
   puts("cipher_word_array ftom text= #{cipher_word_array}")
   text = ''
 
-  for word in cipher_word_array
-    text += decode_word(word)
-  end
+  cipher_word_array.each {|word| text += decode_word(word)}
 
   return text
 end
@@ -64,4 +58,4 @@ puts ("win the second ====#{w}")
 
 t = decode("      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
 
-puts "decode text = #{t}"
+puts "decoded text = #{t}"
